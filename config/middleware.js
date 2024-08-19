@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+/* module.exports = ({ env }) => ({
   settings: {
     cache: {
       enabled: true,
@@ -12,6 +12,15 @@ module.exports = ({ env }) => ({
       models: [
         'article', // Кеширование модели article
       ],
+    },
+  },
+});
+ */
+
+module.exports = ({ env }) => ({
+  settings: {
+    cache: {
+      enabled: false,  // Отключаем кеширование
     },
   },
 });
