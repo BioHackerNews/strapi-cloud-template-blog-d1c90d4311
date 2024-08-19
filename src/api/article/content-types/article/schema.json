@@ -5,26 +5,39 @@
     "singularName": "article",
     "pluralName": "articles",
     "displayName": "Article",
-    "description": "Create your blog content"
+    "description": "This is a content type for articles"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "url": {
+      "type": "text"
+    },
+    "title": {
       "type": "string"
     },
-    "Content": {
-      "type": "text",
-      "maxLength": 150
+    "type": {
+      "type": "enumeration",
+      "enum": ["job", "story", "comment", "poll"]
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "points": {
+      "type": "integer"
     },
-    "title_[language_code]": {
-      "type": "Text"
+    "user": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "comments_count": {
+      "type": "integer"
+    },
+    "comments": {
+      "type": "json"
     }
   }
 }

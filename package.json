@@ -1,17 +1,21 @@
 {
   "dependencies": {
+    "@strapi/plugin-cloud": "4.21.1",
     "@strapi/plugin-graphql": "^4.0.5",
+    "@strapi/plugin-i18n": "4.21.1",
+    "@strapi/plugin-users-permissions": "4.21.1",
+    "@strapi/strapi": "4.21.1",
+    "better-sqlite3": "8.6.0",
     "fs-extra": "^10.0.0",
+    "ioredis": "^5.4.1",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "@strapi/strapi": "4.21.1",
-    "@strapi/plugin-users-permissions": "4.21.1",
-    "@strapi/plugin-i18n": "4.21.1",
-    "@strapi/plugin-cloud": "4.21.1",
-    "better-sqlite3": "8.6.0",
+    "openssl": "^2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "strapi": "^3.6.11",
+    "strapi-middleware-cache": "^2.1.8",
     "styled-components": "5.3.3"
   },
   "name": "my-app-name",
@@ -24,7 +28,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "author": {
     "name": "A Strapi developer"
   },
@@ -35,5 +38,10 @@
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@strapi/typescript-utils": "^4.25.8",
+    "@types/node": "^22.4.1",
+    "typescript": "^5.5.4"
+  }
 }
