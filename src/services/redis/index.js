@@ -3,9 +3,9 @@ const Redis = require('ioredis').default;
 
 // Подключение к Redis
 const redis = new Redis({
-  host: '127.0.0.1', // Укажите хост Redis
-  port: 6379,        // Укажите порт Redis
-  // password: 'your-redis-password', // Если требуется пароль
+  host: 'redis-19991.c8.us-east-1-4.ec2.redns.redis-cloud.com', // Укажите хост Redis
+  port: 19991,        // Укажите порт Redis
+  password: 'lahYVIhHyvDj8Uvr6JrOGzRIpwQW0yqq', // Если требуется пароль
 });
 
 // Функция для получения данных из кеша
