@@ -1,17 +1,26 @@
-module.exports = ({ env }) => [
-  'strapi::logger',
+module.exports = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          'default-src': ["'self'", 'http:', 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'http://localhost:1337', 'https://generous-joy-85ba50b9af.strapiapp.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'http://localhost:1337', 'https://generous-joy-85ba50b9af.strapiapp.com'],
+          'connect-src': ["'self'", 'http://localhost:1337', 'https://generous-joy-85ba50b9af.strapiapp.com'],
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://generous-joy-85ba50b9af.strapiapp.com, https://news.leon.bio, http://localhost:1337, http://localhost:8000/'], // Разрешаем запросы с Deno приложения
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization'],
-      keepHeaderOnError: true,
+      origin: ['http://localhost:1337', 'http://localhost', 'https://generous-joy-85ba50b9af.strapiapp.com'], // Разрешенные источники
     },
   },
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
