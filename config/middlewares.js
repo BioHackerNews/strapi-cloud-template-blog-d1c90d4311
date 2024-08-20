@@ -5,7 +5,7 @@ module.exports = ({ env }) => [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:8000'], // Разрешаем запросы с Deno приложения
+      origin: ['https://news.leon.bio'], // Разрешаем запросы с Deno приложения
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       keepHeaderOnError: true,
